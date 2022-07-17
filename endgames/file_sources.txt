@@ -1,0 +1,5 @@
+I downloaded end games lichess, but the originals came from sesse, unfortunately the website couldn't handle and
+significant amount of download rate.
+
+https://tablebase.lichess.ovh/tables/standard/
+http://tablebase.sesse.net/syzygy/

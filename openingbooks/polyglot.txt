@@ -1,0 +1,7 @@
+I found some example opening books at the following locations:
+
+https://digilander.libero.it/taioscacchi/archivio/Human-polyglot.zip
+https://digilander.libero.it/taioscacchi/archivio/Titans.zip
+https://maughancdn.s3.amazonaws.com/chess/The%20Baron/baronbook30.zip
+
+Titans and Baron both work well for day-to-day games. Human gives a huge variety of openings that is good for training.

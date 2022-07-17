@@ -1,0 +1,10 @@
+[Event "Training"]
+[Site "Local"]
+[Date "2022.05.22"]
+[Round "1"]
+[White "shredder_2050"]
+[Black "leg"]
+[Result "1-0"]
+
+1. e4 c5 2. Nf3 d6 3. Nc3 Nf6 4. Bb5+ Bd7 5. d3 Bxb5 6. Nxb5 a6 7. Nc3 e6 8. O-O Be7 9. Be3 Nc6 10. d4 cxd4 11. Nxd4 Rc8 12. Nxc6 Rxc6 13. Qd3 Qc7 14. Rad1 O-O 15. Bd4 b5 16. a3 Rc8 17. h3 Nd7 18. f4 Bf6 19. Qd2 Bxd4+ 20. Qxd4 Rc4 21. Qxd6 Qa7+ 22. Kh2 Nf6 23. Qd8+ Rxd8 24. Rxd8+ Ne8 25. Rxe8# 1-0
+

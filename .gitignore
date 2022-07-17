@@ -1,0 +1,14 @@
+/dataset/
+/endgames/6-DTZ/
+/endgames/6-WDL/
+/endgames/7-DTZ/
+/endgames/7-WDL/
+/openingbooks/*.bin
+/stockfish/
+/training_files/
+/v1/
+/models/
+/.idea/
+/__pycache__/
+/build/
+/dist/
