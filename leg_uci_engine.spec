@@ -8,7 +8,7 @@ a = Analysis(
     ['leg_uci_engine.py'],
     pathex=[],
     binaries=[],
-    datas=[('models', 'models'), ('openingbooks/Titans.bin', 'openingbooks/Titans.bin'), ('endgames/6-WDL', 'endgames/6-WDL')],
+    datas=[('models', 'models')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

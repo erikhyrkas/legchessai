@@ -8,7 +8,7 @@ import chess.pgn
 def play_stockfish():
     # opening_book_file_path=None,
     leg = leg_engine.LegEngine(max_simulations=70000, use_random_opening=False,
-                               simulation_miss_max=20, use_endgame_tables=True)
+                               simulation_miss_max=20, use_endgame_tables=False)
 
     event_timestamp = datetime.now()
     white_wins = 0.0
@@ -19,7 +19,13 @@ def play_stockfish():
         # with chess.engine.SimpleEngine.popen_uci(r"C:\\Program Files (x86)\\ShredderChess\\Deep Shredder 13\\EngineDeepShredder13UCIx64.exe") as opponent_engine:
         with chess.engine.SimpleEngine.popen_uci(r"stockfish\\stockfish_15_x64_avx2.exe") as opponent_engine:
             opponent_engine.configure({"UCI_LimitStrength": True})
-            opponent_engine.configure({"UCI_Elo": 1500})  # 1350
+            opponent_engine.configure({"UCI_Elo": 1550})
+            # with 20 million positions trained
+            # depth  1, 1550 wins 54% of the time over 100 games
+            # depth  2, 1550 wins 55.5% of the time over 100 games
+            # depth  3, 1550 wins 52% of the time over 100 games
+            # depth  4, 1550 wins 55% of the time over 100 games
+            # depth 14, 1550 wins 44% of the time over 25 games
             for match_round in range(1, 101):
                 game = chess.pgn.Game()
                 node = game
@@ -31,7 +37,7 @@ def play_stockfish():
                     print(f"Round: {match_round} Ply: {current_board.ply()} wins: {white_wins:g}-{black_wins:g}")
                     if current_board.turn == chess.WHITE:
                         # print("LEG's turn starts. Thinking...")
-                        next_move = leg.find_best_move(current_board.fen(), 1, 300)  # 6, 60)  # 2, 0.5) #  1, 0.5)
+                        next_move = leg.find_best_move(current_board.fen(), 2, 300)  # 6, 60)  # 2, 0.5) #  1, 0.5)
                         print(f"Leg's move: {next_move}")
                         # real_best_move = stockfish_analyzer.play(current_board, chess.engine.Limit(time=0.1)).move
                         # print(f"Stockfish would have done: {real_best_move}")

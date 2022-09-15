@@ -347,6 +347,9 @@ moves are going to be way more common and that will lead to the prediction of th
 Personally, I installed Lucas Chess:
 https://lucaschess.pythonanywhere.com/downloads (Source code: https://github.com/lukasmonk/lucaschessR)
 
+This works great when pointed at the chess engine in the dist folder, but I had issues with it working when
+installed in the program files(x86) folder, even though Shredder can use the LEG engine from that folder fine.
+
 Other options (which I haven't tried):
 * The Tarrasch Chess GUI: https://www.triplehappy.com/downloads.html
 * ChessBase Reader: https://en.chessbase.com/pages/download (windows only)
@@ -377,6 +380,12 @@ The Output folder has a `legchess_setup.exe` which you can run to install the LE
 
 If you place it in program files, you can then point at it using a chess engine like Shredder.
 
+The prepackaged engine doesn't use an opening book or endgame tables (and it doesn't really seem to impact the win 
+rate much) since it inflates the overall install size to more than 64 gigabytes.
+
+If you want it to play reasonable openings, you should have your chess GUI use an opening book
+on behalf of the engine.
+
 ## LEG engine From Source
 I'm skeptical that another human being will ever download the source and actually get it running exactly the way
 that I did on my machine, but here's to hoping! This whole process was a learning experience for me and not designed
@@ -402,7 +411,16 @@ engine = LegEngine(ai_model_file=DEFAULT_AI_MODEL, opening_book_file_path=None, 
 If you don't use the prepackaged exe, you'll need to rebundle into an exe after training and including an opening
 book and endgame tables:
 ```
-pyinstaller --add-data models;models --add-data openingbooks/Titans.bin;openingbooks/Titans.bin --add-data endgames/6-WDL;endgames/6-WDL leg_uci_engine.py 
+# basic
+pyinstaller --noconfirm --add-data models;models leg_uci_engine.py 
+
+
+# If you want to distribute the opening book
+pyinstaller --noconfirm --add-data models;models --add-data openingbooks/Titans.bin;openingbooks/Titans.bin leg_uci_engine.py 
+
+# If you enable endgames and opening book in the code, you'll have to update the leg_uci_engine.py file and then add them to the package:
+pyinstaller --noconfirm --add-data models;models --add-data openingbooks/Titans.bin;openingbooks/Titans.bin --add-data endgames/6-WDL;endgames/6-WDL leg_uci_engine.py 
+
 ```
 #### Using pre-trained model 
 If you want to use my model, you'll need to add a folder named "models":

@@ -1,0 +1,10 @@
+[Event "Training"]
+[Site "Local"]
+[Date "2022.05.22"]
+[Round "1"]
+[White "stockfish_1700"]
+[Black "leg"]
+[Result "0-1"]
+
+1. e4 c5 2. d4 cxd4 3. Nf3 Nc6 4. Nxd4 Nf6 5. Nc3 e5 6. Nxc6 bxc6 7. a3 Be7 8. Bc4 O-O 9. Rb1 Qc7 10. Qf3 Rb8 11. h3 Bxa3 12. bxa3 Rxb1 13. Nxb1 d5 14. exd5 cxd5 15. Bd3 e4 16. Bxe4 Nxe4 17. O-O Qxc2 18. Bf4 Ba6 19. Re1 h6 20. Qe3 Qb2 21. a4 Re8 22. Qxa7 Re6 23. Qb8+ Qxb8 24. Bxb8 Nc5 25. Rxe6 fxe6 26. Ba7 Nxa4 27. f3 e5 28. Kh2 Kf7 29. Kg3 d4 30. Nd2 Nc3 31. Nb3 Bc4 32. Nd2 Bd5 33. Bb8 Ke6 34. Kf2 Nd1+ 35. Kg1 Nc3 36. h4 g6 37. Kf2 h5 38. Ke1 Bc6 39. Nc4 e4 40. Ne5 Bb5 41. fxe4 Nxe4 42. Nf3 Kd5 43. Ne5 d3 44. Nf3 Bc4 45. Nd2 Nxd2 46. Kxd2 Ke4 47. Ba7 Kf4 48. Be3+ Kg3 49. Kc3 Bb5 50. Bg5 Kxg2 51. Kd2 Kf2 52. Be3+ Kf3 53. Bg5 Kg3 54. Kc3 Kg4 55. Bf6 Kg3 56. Bd8 Kg4 57. Kd2 Bc4 58. Be7 Kg3 59. Kd1 Kh3 60. Bf6 Kg3 61. Bd8 Kg4 62. Kd2 Kg3 63. Bf6 Kh3 64. Bd8 Kg3 65. Ke1 Kf3 66. Bc7 Ke3 67. Ba5 g5 68. hxg5 h4 69. Bd2+ Kf3 70. Kf1 Bf7 71. Be1 h3 72. Kg1 Ke2 73. Bb4 Bd5 74. Kh2 Bg2 75. Bc3 Ke3 76. Ba5 d2 77. Bxd2+ Kxd2 78. g6 Bd5 79. Kg3 Be6 80. Kh2 Ke3 81. g7 Kf4 82. g8=Q Bxg8 83. Kg1 Kg3 84. Kf1 h2 85. Ke2 h1=Q 86. Kd2 Qf3 87. Kc2 Qb3+ 88. Kc1 Qa2 89. Kd1 Bb3+ 90. Ke1 Qf2# 0-1
+

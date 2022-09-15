@@ -1,0 +1,10 @@
+[Event "Training"]
+[Site "Local"]
+[Date "2022.05.22"]
+[Round "1"]
+[White "leg"]
+[Black "shredder_1550"]
+[Result "0-1"]
+
+1. e4 d5 2. exd5 Qxd5 3. d4 e5 4. Nf3 e4 5. Nc3 Qa5 6. Ne5 Be6 7. Bb5+ c6 8. Bc4 Nf6 9. Bxe6 fxe6 10. O-O Be7 11. Bg5 Nbd7 12. Nc4 Qc7 13. Qe2 O-O-O 14. Nxe4 Rhf8 15. Nxf6 Bxf6 16. Bxf6 Rxf6 17. Rae1 Rdf8 18. Qg4 Rg6 19. Qe4 Kb8 20. Qd3 c5 21. dxc5 Nxc5 22. Qa3 a6 23. Ne5 Rh6 24. b4 Nd7 25. Qg3 Nxe5 26. Rxe5 Rg6 27. Qe3 Qc6 28. Rg5 Rxg5 29. Qxg5 Qc7 30. Qd2 Rd8 31. Qe2 Qd6 32. b5 axb5 33. Qxb5 Qc7 34. c4 g6 35. Rb1 Rd4 36. g3 Rxc4 37. Qe8+ Qc8 38. Qf7 Rc1+ 39. Rxc1 Qxc1+ 40. Kg2 Qc6+ 41. Kh3 Qc4 42. Qf4+ Qxf4 43. gxf4 h6 44. Kg4 Kc7 45. Kh4 Kc6 46. Kg4 Kc7 47. Kh4 Kd7 48. Kg4 Kc7 49. Kh4 Kd6 50. Kg4 Kc7 51. Kh4 b6 52. Kg4 Kd6 53. h4 Kd5 54. h5 gxh5+ 55. Kxh5 Ke4 56. Kxh6 Kxf4 57. Kg6 e5 58. Kf6 e4 59. Ke6 b5 60. Kd5 Kf3 61. Kd4 Kf4 62. Kc5 b4 63. Kxb4 Kf3 64. a4 Kxf2 65. a5 e3 66. a6 e2 67. a7 e1=Q+ 68. Kb5 Qe8+ 69. Kc5 Qe3+ 70. Kd6 Qxa7 71. Ke6 Ke3 72. Kd6 Qb6+ 73. Ke5 Qd8 74. Ke6 Kf3 75. Ke5 Qe7+ 76. Kd5 Qf6 77. Kc5 Ke3 78. Kd5 Kd3 79. Kc5 Kc3 80. Kd5 Qb6 81. Ke5 Qd4+ 82. Ke6 Qc5 83. Kf6 Qd5 84. Ke7 Kc4 85. Kf6 Kd4 86. Kg6 Ke4 87. Kf6 Kf4 88. Kg7 Qf5 89. Kg8 Ke5 90. Kh8 Qg4 91. Kh7 Kf6 92. Kh8 Qg7# 0-1
+

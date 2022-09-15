@@ -1,0 +1,10 @@
+[Event "Training"]
+[Site "Local"]
+[Date "2022.05.22"]
+[Round "1"]
+[White "stockfish_2350"]
+[Black "leg"]
+[Result "1-0"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. a3 Bb7 5. g3 c5 6. Bg2 cxd4 7. Qxd4 Nc6 8. Qd1 Na5 9. Nbd2 Rc8 10. b3 d5 11. O-O dxc4 12. b4 Nc6 13. Nxc4 Qxd1 14. Rxd1 Be7 15. Bb2 O-O 16. b5 Na5 17. Nxa5 bxa5 18. Ne5 Bxg2 19. Kxg2 Rc2 20. Bd4 Bc5 21. a4 Bxd4 22. Rxd4 Rxe2 23. Nc6 e5 24. Kf1 Rxf2+ 25. Kxf2 exd4 26. Ke2 Re8+ 27. Kd3 Re3+ 28. Kxd4 Re4+ 29. Kd3 Re6 30. Nxa7 Ng4 31. Nc6 Nxh2 32. Kc3 Re3+ 33. Kc4 h5 34. b6 Nf3 35. Nxa5 Ne5+ 36. Kd4 Re2 37. Nc4 Nc6+ 38. Kd5 Re6 39. a5 Ne7+ 40. Kc5 Rc6+ 41. Kb5 f5 42. a6 Rc8 43. Nd6 Rd8 44. b7 Rxd6 45. b8=Q+ Kh7 46. Qxd6 Nc8 47. Qc5 f4 48. a7 Nxa7+ 49. Rxa7 Kh6 50. Qe5 g6 51. gxf4 g5 52. Qf6# 1-0
+

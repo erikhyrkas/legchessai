@@ -1,3 +1,4 @@
+import pathlib
 import random
 import sys
 import traceback
@@ -125,9 +126,28 @@ TOP_MOVE_CONFIDENCE_THRESHOLD = 0.001
 # 1.011/5 Wins  5.0% vs 1700
 # 1.050/5 Wins  5.0% vs 1700
 
-
-TOP_MOVE_BEST_TO_WORST_SCORE_RATIO = 1.025  # 1.1  # 1.5  # 2  80=91%  90=91% 100 == 95%
-NUMBER_OF_TOP_MOVES_TO_INCLUDE = 1  # 3  # 10  14 = 90% 15 == 95%
+# 1.50/2 Wins  5.0% vs 1700 (depth 4 min)
+# 1.30/3 Wins 25.0% vs 1700 (depth 4 min)
+# 1.40/3 Wins 35.0% vs 1700 (depth 4 min)
+# 1.45/3 Wins 18.0% vs 1700 (depth 4 min)
+# 1.50/3 Wins 25.0% vs 1700 (depth 6 min)
+# 1.50/3 Wins 27.5% vs 1700 (depth 5 min)
+# 1.50/3 Wins 35.0% vs 1700 (depth 2 min)
+# 1.50/3 Wins 37.5% vs 1700 (depth 3 min)
+# 1.50/3 Wins 40.0% vs 1700 (depth 4 min)
+# 1.50/3 Wins 40.4% vs 1700 (depth 4 max)
+# 1.50/3 Wins 25.0% vs 1700 (depth 4 mean)
+# 1.50/3 Wins 23.3% vs 1700 (depth 4 last)
+# 1.50/3 Wins  5.0% vs 1700 (depth 4 trimmed)
+# 1.51/3 Wins 55.0% vs 1700 (depth 4 min) -- anomaly... 35% in retest.
+# 1.52/3 Wins 25.9% vs 1700 (depth 4 min)
+# 1.55/3 Wins 37.5% vs 1700 (depth 4 min)
+# 1.60/3 Wins 25.0% vs 1700 (depth 4 min)
+# 1.50/4 Wins 20.0% vs 1700 (depth 4 min)
+# 1.50/5 Wins 15.0% vs 1700 (depth 4 min)
+# 2.00/5 Wins 15.0% vs 1700 (depth 4 min)
+TOP_MOVE_BEST_TO_WORST_SCORE_RATIO = 1.51  # 1.1  # 1.5  # 2  80=91%  90=91% 100 == 95%
+NUMBER_OF_TOP_MOVES_TO_INCLUDE = 3  # 3  # 10  14 = 90% 15 == 95%
 TOP_MOVES_DISTRIBUTION_CONSTANT = NUMBER_OF_TOP_MOVES_TO_INCLUDE
 MAX_REBALANCE_RATE = 0.25
 REBALANCES_PER_SEARCH = 1
@@ -807,9 +827,14 @@ def count_remaining_pieces(current_board):
     return result
 
 
+@lru_cache
+def get_current_path():
+    return pathlib.Path(__file__).parent.resolve()
+
+
 def find_end_game_move(current_board):
     end_move = None
-    with chess.syzygy.open_tablebase("endgames/6-WDL") as tablebase:
+    with chess.syzygy.open_tablebase(f"{get_current_path()}/endgames/6-WDL") as tablebase:
         best_end_move_rating = -2
         for next_move in current_board.legal_moves:
             next_rating = tablebase.get_wdl(current_board)

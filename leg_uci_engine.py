@@ -1,3 +1,4 @@
+import pathlib
 import sys
 import chess.pgn
 import os
@@ -11,13 +12,16 @@ def output_now(line):
 
 def main():
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
-    engine = LegEngine(opening_book_file_path="openingbooks/Titans.bin",
+    openings = None
+    opening_book_file_path = pathlib.Path(__file__).parent.resolve()
+    if opening_book_file_path is not None:
+        opening_book_file_path = f"{opening_book_file_path}/openingbooks/Titans.bin"
+        if os.path.exists(opening_book_file_path):
+            openings = "openingbooks/Titans.bin"
+    engine = LegEngine(opening_book_file_path=openings,
                        ai_model_file=DEFAULT_AI_MODEL,
                        max_simulations=70000, use_random_opening=False,
-                       simulation_miss_max=20, use_endgame_tables=True)
-    # ask the engine to evaluate a move for the purposes of loading the model into the video card
-    engine.find_best_move("1qr4k/6pp/2r1n3/4RQ2/p7/P3P2P/5PPK/1R6 b - - 3 31")
+                       simulation_miss_max=20, use_endgame_tables=False)
     current_board = chess.Board()
     command_stack = []
     our_time = 1000
@@ -65,8 +69,7 @@ def main():
             _, *params = next_command.split(' ')
             for param, val in zip(*2 * (iter(params),)):
                 if param == 'depth':
-                    # depth = int(val)
-                    depth = 1  # NOTICE: ignore depth right now since we know that only depth of 1 works well.
+                    depth = int(val)
                 if param == 'movetime':
                     move_time = int(val)/1000.0
                 if param == 'wtime':
@@ -84,6 +87,8 @@ def main():
             output_now(f"bestmove {best_move.uci()}")
         elif next_command.startswith('time'):
             our_time = int(next_command.split()[1])
+        elif next_command.startswith('registration'):
+            output_now('registration ok')
         else:
             pass
 

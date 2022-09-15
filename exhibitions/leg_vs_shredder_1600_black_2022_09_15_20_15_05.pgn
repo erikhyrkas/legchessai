@@ -1,0 +1,10 @@
+[Event "Training"]
+[Site "Local"]
+[Date "2022.05.22"]
+[Round "1"]
+[White "leg"]
+[Black "shredder_1600"]
+[Result "0-1"]
+
+1. e4 d5 2. exd5 Qxd5 3. d4 e5 4. Nf3 exd4 5. Qxd4 Nf6 6. Nc3 Qxd4 7. Nxd4 Bc5 8. Be3 a6 9. O-O-O O-O 10. Ne6 Bxe3+ 11. fxe3 Bxe6 12. Be2 Nc6 13. Rhf1 Ne5 14. h3 Rfe8 15. g4 Rad8 16. Rxd8 Rxd8 17. g5 Nfd7 18. h4 Nb6 19. Ne4 Nbc4 20. Rd1 Rxd1+ 21. Bxd1 Nxe3 22. Nc5 Nxd1 23. Kxd1 Bc8 24. Ke2 Ng6 25. h5 Nf4+ 26. Ke3 Nxh5 27. b4 f6 28. gxf6 Nxf6 29. a4 Nd5+ 30. Kd4 Nxb4 31. a5 Nc6+ 32. Kd5 Nxa5 33. Nd3 b6 34. Ne5 h5 35. Ke4 g5 36. Nf3 g4 37. Nh4 Nb7 38. Ng6 Kf7 39. Nf4 Nc5+ 40. Ke3 h4 41. Nd5 h3 42. Kf2 Bb7 43. Nf4 h2 44. Ne2 h1=Q 45. Ng1 Qg2+ 46. Ke3 Qxg1+ 47. Kd2 Qf2+ 48. Kc1 g3 49. Kb2 g2 50. Ka3 Qxc2 51. Kb4 Qb3# 0-1
+

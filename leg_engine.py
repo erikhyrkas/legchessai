@@ -6,7 +6,7 @@ import chess.polyglot
 import chess.syzygy
 import keras.models as models
 import numpy
-
+import pathlib
 from board_state_node import BoardStateTreeNode, move_paths_to_string
 from data_utils import printlog, encode_fen, moves_from_encoded_array, category_to_confidence_winning, \
     count_remaining_pieces, find_end_game_move
@@ -21,7 +21,11 @@ class LegEngine:
     def __init__(self, opening_book_file_path="openingbooks/Titans.bin", use_endgame_tables=True, use_concurrency=False,
                  use_random_opening=False, ai_model_file=None, max_simulations=20, simulation_miss_max=20,
                  time_limit_margin=0.015):
-        self.opening_book_file_path = opening_book_file_path
+        current_path = pathlib.Path(__file__).parent.resolve()
+        if opening_book_file_path is not None:
+            self.opening_book_file_path = f"{current_path}/{opening_book_file_path}"
+        else:
+            self.opening_book_file_path = None
         self.use_random_opening = use_random_opening
         self.use_endgame_tables = use_endgame_tables
         self.use_concurrency = use_concurrency
@@ -29,7 +33,8 @@ class LegEngine:
         self.simulation_miss_max = simulation_miss_max
         self.time_limit_margin = time_limit_margin
         self.ai_model_file = ai_model_file or DEFAULT_AI_MODEL
-        self.ai_model = models.load_model(self.ai_model_file)
+        model_path = f"{current_path}/{self.ai_model_file}"
+        self.ai_model = models.load_model(model_path)
         # self.ai_model.summary()
 
     @lru_cache(4096)
@@ -71,8 +76,6 @@ class LegEngine:
                         if opening_move is not None:
                             # printlog(f"Book Move: {opening_move}")
                             return opening_move.move
-                else:
-                    return chess.Move.from_uci("e2e4")
             with chess.polyglot.open_reader(self.opening_book_file_path) as opening_book:
                 opening_move = opening_book.get(current_board)
                 if opening_move is not None:

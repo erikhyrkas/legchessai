@@ -229,7 +229,7 @@ class BoardStateTreeNode:
         # else:
         #     label = "you"
         if len(child.children) == 0:
-            confidence_of_path = arithmetic_mean(new_previous_confidence)  # min(new_previous_confidence)  # arithmetic_mean(new_previous_confidence)
+            confidence_of_path = min(new_previous_confidence)  # new_previous_confidence[-1]  # min(new_previous_confidence)  # arithmetic_mean(new_previous_confidence)  # min(new_previous_confidence)  # arithmetic_mean(new_previous_confidence)
             # printlog(
             #     f"{label}\t\t{move}\t{move_confidence:0.6f}\t\t{position_confidence:0.6f}\t\t\t{adjusted_confidence:0.6f}\t\t\t{confidence_of_path:0.6f}\t{new_previous_confidence}")
             return (move, confidence_of_path, position_confidence,
